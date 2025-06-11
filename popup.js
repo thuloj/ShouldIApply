@@ -259,22 +259,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
 
-      if (!response.isJobPage) {
-        console.log('Not a job page:', response.reason);
-        hideLoading();
-        showError(response.reason);
-        return;
-      }
-
       if (!response.jobText) {
-        console.error('No job text in response');
-        throw new Error('Failed to extract job information');
+        console.error('No text extracted from page');
+        throw new Error('Failed to extract page content');
       }
 
-      console.log('Job text extracted, length:', response.jobText.length);
+      console.log('Text extracted, length:', response.jobText.length);
 
-      // Send job text to background script for analysis
-      console.log('Sending job text to background script for analysis...');
+      // Send text to background script for analysis
+      console.log('Sending text to background script for analysis...');
       const analysisResponse = await new Promise((resolve, reject) => {
         chrome.runtime.sendMessage(
           { action: 'analyzeMatch', jobText: response.jobText },
