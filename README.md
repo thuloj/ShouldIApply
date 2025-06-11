@@ -1,6 +1,6 @@
-# Simple Counter Chrome Extension
+# Job Match Analysis Chrome Extension
 
-A basic Chrome extension that displays a counter that increments when clicked.
+A basic Chrome extension that reports whether or not you should apply to the job you're viewing. 
 
 ## How to Test the Extension
 
