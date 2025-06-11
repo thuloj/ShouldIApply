@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Matcher Options</title>
+  <style>
+    body {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    .container {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #2c3e50;
+      font-weight: 500;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    input[type="text"]:focus {
+      border-color: #2196F3;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+    }
+    .save-button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+    .save-button:hover {
+      background-color: #1976D2;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .status.success {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #a5d6a7;
+    }
+    .status.error {
+      background: #ffebee;
+      color: #c62828;
+      border: 1px solid #ef9a9a;
+    }
+    .instructions {
+      background: #fff3e0;
+      border: 1px solid #ffe0b2;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 20px;
+      color: #e65100;
+    }
+    .instructions ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .instructions li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Matcher Settings</h1>
+    
+    <div class="instructions">
+      <strong>How to get your OpenAI API key:</strong>
+      <ol>
+        <li>Go to <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API Keys</a></li>
+        <li>Sign in or create an account</li>
+        <li>Click "Create new secret key"</li>
+        <li>Copy your API key and paste it below</li>
+      </ol>
+    </div>
+
+    <div class="form-group">
+      <label for="apiKey">OpenAI API Key:</label>
+      <input type="text" id="apiKey" placeholder="sk-...">
+    </div>
+
+    <button class="save-button" id="saveButton">Save Settings</button>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html> 
